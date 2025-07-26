@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Porch Design System Case Study</title>
+<style>
+/* === BASE STYLES === */
+section { padding: 2em 15%; }
+h1, h2, h3, h4, p, li { font-family: Futura, sans-serif; margin: 0 0 1em; }
+h1 { font-size: 56px; line-height: 1.2; }
+h2 { font-size: 44px; line-height: 1.2; }
+h3, h4 { font-size: 30px; font-style: italic; background: #fff; color: #4469F5; }
+p, li { font-size: 18px; line-height: 1.5; }
+
+/* === LAYOUT === */
+.two-col, .two-one-col { overflow: hidden; margin-bottom: 2em; }
+.two-col .left, .two-one-col .left { float: left; width: 45%; padding-right: 1.5rem; }
+.two-col .right, .two-one-col .right { float: left; width: 45%; padding-left: 1.5rem; }
+.multi { column-count: 2; column-gap: 1.5rem; column-rule: 1px solid #ccc; hyphens: auto; }
+
+/* === COLORS DE HAPPY PORCH === */
+.cs-intro    { background-color: #4469F5; color: white; padding-bottom: 5rem; }
+.cs-overview { background-color: #6E6E6E; color: white; }
+.cs-goals    { background-color: #D8E3E8; color: #43585F; }
+.cs-role     { background-color: #C7C7C7; color: #333; }
+.cs-process  { background-color: #AAE7C0; color: #43585F; }
+.cs-impact   { background-color: #4469F5; color: white; }
+.cs-gallery  { background-color: #D9CAE3; color: #333; padding: 60px 20px; text-align: center; }
+.cs-conclusion{ background-color: #D8E3E8; color: #43585F; }
+.cs-cta      { background: #6E6E6E; color: #fff; text-align: center; padding: 80px 20px; }
+
+/* === CTA === */
+.cta-container { max-width: 700px; margin: auto; }
+.cs-cta h2    { font-size: 3rem; font-weight: 600; margin-bottom: 25px; }
+.cs-cta p     { font-size: 1.25rem; line-height: 1.8; margin-bottom: 40px; }
+.cta-button   { display: inline-block; background: #4469F5; color: #fff; padding: 16px 36px; font-size: 1.1rem; font-weight: 500;
+                border-radius: 6px; text-decoration: none; transition: background-color .3s ease, transform .2s ease; }
+.cta-button:hover { background: #3352c3; transform: translateY(-2px); }
+
+/* === GALLERY === */
+.image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
+.thumb img      { width: 100%; border-radius: 8px; cursor: pointer; transition: transform .3s ease; }
+.thumb img:hover{ transform: scale(1.03); }
+.caption        { font-size: .9em; color: #333333; margin-top: .5em; }
+
+/* === ANIMACIONES === */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-left { opacity: 0; transform: translateX(-20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-right { opacity: 0; transform: translateX(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.visible { opacity: 1; transform: translate(0, 0); }
+
+/* Accessibility */
+a:focus, button:focus { outline: 2px dashed #6A4C93; outline-offset: 4px; }
+</style>
+</head>
+<body>
+
+<section class="cs-intro">
+  <div class="two-one-col">
+    <h1 class="left fade-left">Happy Porch Design System</h1>
+    <img class="right fade-right" src="https://static.wixstatic.com/media/2a58bc_856544f51d4d4c0380e5535161adcc95~mv2.webp">
+  </div>
+  <h3 class="fade-left">Building the foundations for scalable, accessible and consistent design</h3>
+  <div class="multi fade-right">
+    <p>Happy Porch is a purpose-driven digital agency that partners with social impact organizations. In 2017, I joined their distributed team to develop a foundational design system that would unify their growing portfolio of web and mobile products. The project aimed to improve cross-team collaboration, ensure brand consistency, and streamline design-to-development workflows across several products and clients.</p>
+  </div>
+</section>
+
+<section class="cs-overview fade-in">
+  <h2 class="fade-left">Project Overview</h2>
+  <p class="multi fade-right">Happy Porch had been growing steadily and managing multiple digital products, but lacked a unified system to manage visual consistency and user experience. Each designer and developer had their own way of solving UI challenges, which led to design debt and inefficiencies. <br> My mission was to design and document a modular, reusable system — one that could adapt to different client brands while maintaining strong usability and accessibility principles.</p>
+</section>
+
+<section class="cs-goals">
+  <h2 class="fade-left">Goals & Challenges</h2>
+  <ul class="multi fade-right">
+    <li>Improve design and development velocity through reusable UI components</li>
+    <li>Ensure visual and UX consistency across products and teams</li>
+    <li>Build a flexible system to support client-specific branding</li>
+    <li>Increase accessibility standards compliance (WCAG)</li>
+    <li>Facilitate onboarding of new designers and developers</li>
+    <li>Align design and front-end implementation with shared documentation</li>
+  </ul>
+</section>
+
+<section class="cs-role">
+  <h2 class="fade-left">My Role</h2>
+  <p class="multi fade-right">As the lead designer, I was responsible for both strategic and executional work:</p>
+  <ul class="multi fade-right">
+    <li>Auditing existing design patterns and front-end implementations</li>
+    <li>Creating a visual language and UI component library</li>
+    <li>Collaborating closely with developers to ensure seamless handoff</li>
+    <li> Writing system documentation and usage guidelines</li>
+    <li>Facilitating design reviews and onboarding team members</li>
+    <li>All components were designed considering front-end constraints and development workflows, with specs and assets ready for direct implementation.</li>
+  </ul>
+</section>
+
+<section class="cs-process">
+  <h2 class="fade-left">Process Highlights</h2>
+  <div class="steps">
+    <div class="two-col fade-up">
+      <div class="left">
+        <h4 class="fade-left">1. Audit & Foundation</h4>
+        <p class="fade-right">Reviewed existing interfaces to identify visual inconsistencies and functional redundancies. From this audit, defined a UI architecture and a component taxonomy aligned with the product’s modular needs.</p>
+      </div>
+      <div class="right">
+        <h4 class="fade-left">2. System Design & Documentation</h4>
+        <p class="fade-right">Developed reusable components and design tokens in <i>Sketch</i>. Created a shared design library with annotations, interaction specs, and usage guidelines. Ensured consistency across teams through documentation and naming conventions.</p>
+      </div>
+    </div>
+    <div class="two-col fade-up">
+      <div class="left">
+        <h4 class="fade-left">3. Collaboration & Iteration</h4>
+        <p class="fade-right">Worked closely with developers and stakeholders to validate components, refine interactions, and integrate accessibility considerations. Delivered a flexible system that evolved through feedback and supported long-term scalability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-impact">
+  <div class="two-col">
+    <div class="left fade-left">
+      <h2>Results & Impact</h2>
+      <p>The design system became a central resource for the Happy Porch team. It reduced friction in the design–development cycle, increased the speed of interface building, and improved onboarding of new team members.</p>
+    </div>
+    <div class="right fade-right">
+      <h2> Key outcomes:</h2>
+      <ul>
+        <li>Delivered the first modular design system for Happy Porch, enabling interface consistency across digital products.</li>
+        <li>Reduced design redundancy and improved team alignment through shared libraries and naming conventions.</li>
+        <li>Accelerated development time by equipping engineers with ready-to-implement, well-documented UI components.</li>
+        <li>Contributed to long-term scalability by establishing a foundation for future iterations of the product.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cs-gallery">
+  <h2 class="fade-left">Visual Snapshots</h2>
+  <div class="image-gallery">
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_9d8b43b726e5453f86df80b32814cd39~mv2.png" alt="Happy Porch - Design tokens and style guide">
+      <p class="caption">Design tokens and style guide</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_c1f9e588651845bea8e492131d3db730~mv2.png" alt="Happy Porch - Iterative component refinement">
+      <p class="caption">Iterative component refinement</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_824035cf888e41b8b65989be5f01a294~mv2.png" alt="Happy Porch - Component library overview">
+      <p class="caption">Component library overview</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_ec33a615ba164f20a2ccbad9f2cb08b9~mv2.png" alt="Happy Porch - Page layout structure">
+      <p class="caption">Page layout structure</p>
+    </div>
+  </div>
+</section>
+
+<section class="cs-conclusion">
+  <h2 class="fade-left">Conclusions</h2>
+  <p class="multi fade-right">This project reinforced the power of design systems as bridges between design and engineering, enabling scalable, consistent, and accessible products.</p>
+</section>
+
+<section class="cs-cta fade-up">
+  <div class="cta-container">
+    <h2 class="fade-left">Let's collaborate</h2>  
+    <p class="fade-right">If you value thoughtful UX/UI work for meaningful products, let’s connect.</p>
+    <a href="https://ux-ui.rociofatas.info/contact" target="_top" class="cta-button fade-in">Get in touch</a>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  /* === ANIMACIONES DE SCROLL === */
+  const faders = document.querySelectorAll('.fade-in, .fade-left, .fade-right, .fade-up');
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach((fader, index) => {
+    fader.style.transitionDelay = `${Math.min(index * 0.03, 0.15)}s`;
+    appearOnScroll.observe(fader);
+  });
+
+  /* === LIGHTBOX via postMessage (con galería completa) === */
+  const allImages = Array.from(document.querySelectorAll('.image-gallery img')).map(img => ({
+    src: img.src,
+    caption: img.nextElementSibling ? img.nextElementSibling.innerText : ""
+  }));
+
+  document.querySelectorAll('.image-gallery img').forEach((img, index) => {
+    img.addEventListener('click', () => {
+      window.parent.postMessage(
+        {
+          type: 'openLightbox',
+          items: allImages,
+          startIndex: index
+        },
+        '*'
+      );
+    });
+  });
+});
+</script>
+
+</body>
+</html>
